@@ -169,7 +169,7 @@ class TuyaClimate(TuyaDevice):
         # the value used to set temperature is scaled based on the configured divider
         divider = self._divider or 1
         input_val = float(temperature)
-        scaled_val = input_val * divider
+        scaled_val = input_val
         digits1 = None if input_val.is_integer() else 1
         digits2 = None if scaled_val.is_integer() else 1
 
